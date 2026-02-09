@@ -110,7 +110,8 @@ class BasePage {
       for (const selector of cookieSelectors) {
         if (await this.isElementVisible(selector)) {
           await this.click(selector);
-          await this.page.waitForTimeout(1000);
+          // Wait for the cookie banner to disappear after accepting
+          await this.page.locator(selector).waitFor({ state: 'hidden', timeout: 3000 }).catch(() => {});
           break;
         }
       }
