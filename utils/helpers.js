@@ -5,11 +5,16 @@
  */
 
 /**
- * Wait for a specific amount of time
+ * @deprecated Use Playwright's built-in waiting mechanisms instead (waitForSelector, waitForLoadState, etc.)
+ * 
+ * Wait for a specific amount of time - AVOID USING THIS
+ * This helper is provided for edge cases only. Prefer Playwright's auto-waiting features.
+ * 
  * @param {number} ms - Milliseconds to wait
  * @returns {Promise<void>}
  */
 async function wait(ms) {
+  console.warn('WARNING: Using arbitrary timeout. Consider using Playwright auto-waiting instead.');
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
