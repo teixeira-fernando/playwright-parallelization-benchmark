@@ -42,10 +42,11 @@ npx playwright install
 ```
 playwright-parallelization-benchmark/
 ├── tests/                      # Test specifications
-│   ├── home.spec.js           # Homepage tests
-│   ├── navigation.spec.js     # Navigation tests
-│   ├── accessibility.spec.js  # Accessibility tests
-│   └── performance.spec.js    # Performance tests
+│   ├── example.spec.js        # Example tests (no external dependencies)
+│   ├── home.spec.js           # Homepage tests (requires internet)
+│   ├── navigation.spec.js     # Navigation tests (requires internet)
+│   ├── accessibility.spec.js  # Accessibility tests (requires internet)
+│   └── performance.spec.js    # Performance tests (requires internet)
 ├── pages/                      # Page Object Models
 │   ├── BasePage.js            # Base page with common functionality
 │   └── HomePage.js            # Homepage page object
@@ -58,6 +59,9 @@ playwright-parallelization-benchmark/
 ├── playwright.config.azure.js  # Azure cloud configuration
 └── package.json               # Project dependencies and scripts
 ```
+
+> **Note:** The Verivox tests (home, navigation, accessibility, performance) require internet access to www.verivox.de. 
+> The example.spec.js tests demonstrate the framework functionality without external dependencies.
 
 ## 🧪 Running Tests
 

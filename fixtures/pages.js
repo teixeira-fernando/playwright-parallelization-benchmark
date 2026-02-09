@@ -3,13 +3,13 @@
  * 
  * Custom fixtures provide reusable test setup and page objects
  */
-const { test as base } = require('@playwright/test');
+const base = require('@playwright/test');
 const HomePage = require('../pages/HomePage');
 
 /**
  * Extended test with page objects
  */
-const test = base.extend({
+const test = base.test.extend({
   /**
    * Home page fixture
    */
