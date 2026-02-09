@@ -1,0 +1,42 @@
+{
+  "name": "playwright-parallelization-benchmark",
+  "version": "1.0.0",
+  "description": "Playwright testing framework for Verivox.de with parallel execution support and Azure cloud integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:mobile": "playwright test --project=mobile-chrome --project=mobile-safari",
+    "test:parallel": "playwright test --workers=4",
+    "test:azure": "playwright test --config=playwright.config.azure.js",
+    "test:report": "playwright show-report",
+    "test:ui": "playwright test --ui"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teixeira-fernando/playwright-parallelization-benchmark.git"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "e2e",
+    "verivox",
+    "parallel",
+    "azure",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teixeira-fernando/playwright-parallelization-benchmark/issues"
+  },
+  "homepage": "https://github.com/teixeira-fernando/playwright-parallelization-benchmark#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "playwright": "^1.58.2"
+  }
+}
