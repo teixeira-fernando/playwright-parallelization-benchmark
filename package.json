@@ -12,7 +12,9 @@
     "test:webkit": "playwright test --project=webkit",
     "test:mobile": "playwright test --project=mobile-chrome --project=mobile-safari",
     "test:parallel": "playwright test --workers=4",
+    "test:chromium:parallel": "playwright test --project=chromium --workers=4",
     "test:azure": "playwright test --config=playwright.config.azure.js",
+    "test:azure:chromium": "playwright test --config=playwright.config.azure.js --project=chromium",
     "test:report": "playwright show-report",
     "test:ui": "playwright test --ui"
   },
@@ -37,6 +39,7 @@
   "homepage": "https://github.com/teixeira-fernando/playwright-parallelization-benchmark#readme",
   "devDependencies": {
     "@playwright/test": "^1.58.2",
-    "playwright": "^1.58.2"
+    "playwright": "^1.58.2",
+    "dotenv": "^16.4.5"
   }
 }
